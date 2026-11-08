@@ -1,0 +1,7 @@
+# Third-party packages imported by CDS_auto_country.py.
+# Versions were not recorded; pin them once a working set is confirmed.
+cdsapi
+xarray
+pandas
+numpy
+rasterio

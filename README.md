@@ -83,6 +83,14 @@ The script downloads and processes climate data as follows:
   logger.setLevel(logging.DEBUG)
   ```
 
+## Data
+- **Source:** ERA5 hourly reanalysis on single levels (`reanalysis-era5-single-levels`) from the Copernicus Climate Data Store, downloaded through `cdsapi`. The script requests `2m_temperature` and `total_precipitation` for every day and hour of each year listed in the `countries` dictionary, clipped to that country's latitude and longitude box.
+- **Access:** a free CDS account and an API key in `~/.cdsapirc` are needed (see Requirements above). Keep the key out of the repository.
+- **Not in the repository:** no downloaded or processed data are included. The `.zip`, `unzip/`, `<country>/NC/`, `CDS/` CSV and GeoTIFF outputs are created locally when the script runs. `.gitignore` excludes `.nc` and `.csv` files.
+
+## Running time
+Not recorded.
+
 ## License
 This script is open-source and available under the **MIT License**.
 
